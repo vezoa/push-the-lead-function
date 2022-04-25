@@ -10,7 +10,7 @@ function vzlPushLead($data, $app_base_url = "https://leads.vezoa.com/", $source 
 {
     try {
 
-        $vzl_route = $app_base_url . "/api/v1/leads";
+        $vzl_route = trim($app_base_url, '/') . "/api/v1/leads";
 
         $vzl_ch = curl_init();
 
